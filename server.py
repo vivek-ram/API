@@ -12,23 +12,8 @@ class Item(BaseModel):
 
 app = FastAPI()
 
-@app.get('/index')
-def hello_word():
-    return 'hi yo'
 
-# @app.post('/api/predict')
-# def predict_image(file: bytes = File(...)):
-#     # read the file upload by user
-#     image = read_image(file)
-#     # preprocessing
-#     image = preprocess(image)
-#     # predict
-#     predictions = predict(image)
-#
-#
-#     return {"prediction": predictions}
-
-@app.post('/api/predict')
+@app.post('/')
 async def predict_image(item:Item):
         image = decod(item.image)
         # # preprocessing
