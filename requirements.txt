@@ -6,3 +6,4 @@ numpy
 Pillow
 pybase64
 pydantic
+gunicorn==20.0.4
