@@ -19,3 +19,6 @@ async def predict_image(item:Item):
         image = preprocess(image)
         predictions = predict(image)
         return predictions
+
+if __name__ == "__main__":
+    uvicorn.run(app, host='0.0.0.0')
