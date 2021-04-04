@@ -40,7 +40,7 @@ def predict(image: np.ndarray):
     for i in temp:
         label[i] = str(round(prob[0][dum]*100,2)) + '%'
         dum += 1
-    dic = {'prediction':predictions,'probability':label}
+    dic = {'prediction':predictions,'probability':str(label)}
     return dic
 
 
